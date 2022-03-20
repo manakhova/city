@@ -6,9 +6,7 @@
   "private": true,
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack-dev-server",
-    "eslint": "eslint --ext .jsx --ext .js src/",
-    "test": "npm run eslint"
+    "start": "webpack-dev-server"
   },
   "keywords": [],
   "author": "",
