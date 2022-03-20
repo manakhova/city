@@ -1,0 +1,65 @@
+@import "fonts.scss";
+@import "vars.scss";
+@import "mixins.scss";
+
+.page__body {
+  font-family: "Droid Sans", "Arial", sans-serif;
+  font-size: 22px;
+  line-height: 22px;
+  height: 100%;
+
+  @include mob {
+    font-size: 16px;
+  }
+}
+
+.city {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 60px auto;
+  padding: 30px;
+  border: 1px solid $basic-black;
+  border-radius: 20px;
+  box-sizing: border-box;
+
+  @include mob {
+    width: 95%;
+    border-radius: 15px;
+  }
+
+  &__label {
+    margin-bottom: 20px;
+
+    @include mob {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__input {
+    font-family: "Droid Sans", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    text-align: left;
+    color: black;
+    height: 55px;
+    background-color: $basic-grey;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 35px;
+    box-sizing: border-box;
+    transition: .3s;
+
+    @include mob {
+        height: 45px;
+    }
+
+    &:focus,
+    &:hover {
+      outline: none;
+      background-color: white;
+      border: 1px solid $basic-black;
+      transition: .3s;
+    }
+  }
+}
