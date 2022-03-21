@@ -20,7 +20,7 @@ ReactDOM.render(
 );
 
 //функция, которая перезаписывает ключи объекта в верхний регистр
-function getRewritenObj(obj) {
+function getRewrittenObj(obj) {
   function getNewKey(o) {
     for(var key in o) {
       if(typeof(o[key]) === 'object') {
@@ -45,10 +45,11 @@ const a = {
     d: {
       e: 3,
       f: {
-        g: 4
+        g: 4,
+        h: 9
       }
     }
   }
 };
 
-getRewritenObj(a);
+getRewrittenObj(a);
