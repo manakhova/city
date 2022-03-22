@@ -3,7 +3,6 @@ let jsonpAdapter = require('axios-jsonp');
 
 const getCities = (data) => {
   data.result.shift();
-  console.log(data);
   return data.result.map((item) => (item.name))
 };
 
