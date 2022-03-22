@@ -19,6 +19,11 @@ ReactDOM.render(
   document.querySelector(`#root`)
 );
 
+
+
+
+
+
 //функция, которая перезаписывает ключи объекта в верхний регистр
 function getRewrittenObj(obj) {
   function getNewKey(o) {

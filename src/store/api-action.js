@@ -1,10 +1,13 @@
 import {ActionCreator} from "./action";
+let jsonpAdapter = require('axios-jsonp');
 
 const getCities = (data) => {
-  return data.map((item) => (item.city))
+  data.result.shift();
+  console.log(data);
+  return data.result.map((item) => (item.name))
 };
 
-export const fetchData = () => (dispatch, _getState, api) => (
-  api.get()
+export const fetchData = (query) => (dispatch, _getState, api) => (
+  api.get(`https://kladr-api.ru/api.php&query=${query}`, {adapter: jsonpAdapter})
     .then(({data}) => dispatch(ActionCreator.loadCities(getCities(data))))
 );

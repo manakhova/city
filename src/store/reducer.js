@@ -2,7 +2,7 @@ import {ActionType} from './action';
 
 const initialState = {
   cities: [], 
-  isDataLoaded: false
+  query: ''
 }
 
 const reducer = (state = initialState, action) => {
@@ -10,8 +10,12 @@ const reducer = (state = initialState, action) => {
     case ActionType.GET_CITIES:
       return {
         ...state,
-        cities: action.payload,
-        isDataLoaded: true
+        cities: action.payload
+      };
+    case ActionType.GET_NAME:
+      return {
+        ...state,
+        query: action.payload
       };
   }
   
